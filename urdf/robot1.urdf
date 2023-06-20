@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<robot name="my_first_robot">
+
+  <!-- Base Footprint -->
+  <link name = "base_footprint"/>
+  
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <box size="0.5 0.5 0.25"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Joint between Base footprint and base_link --> 
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link" />
+    <origin xyz="0 0 0.010" rpy="0 0 0"/>
+  </joint>
+
+</robot>
